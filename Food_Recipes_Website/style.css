@@ -265,5 +265,10 @@ section .main_bttn:hover i{
 }
 
 .recipes .recipes_box .recipes_card .recipes_image::hover img{
-    transform: scale(1.1);
+    transform: scale(1.1);  /* Calismadi kesin resimlerden kaynakli :D */ 
 }
+
+.recipes .recipes_box .recipes_card .small_card {
+    
+}
+
