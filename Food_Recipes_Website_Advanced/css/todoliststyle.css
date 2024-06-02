@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --black: #0000; 
+    --red:#C61938;
+    --orange:#ed7e3b;
+    --yellow:#fffacf;
+    --light-color:#fac031;
+    --box-shadow:0.5rem 1.5rem rgba(158, 3, 3, 0.1);
+}
+
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body{
+    background-color: #fcdbbd;   /*DEGISEBILIR*/
+    background: linear-gradient(to right, #fe4c4c, #ff9a00);
+}
+
+.container{
+    position: relative;
+    max-width: 30rem;
+    width: 100%;
+    border-radius: .5rem;
+    margin: 5.3rem auto 0; padding: 1.5rem;
+    background-color: var(--orange);
+    box-shadow: var(--box-shadow);
+}
+
+.container .input-field{
+    position: relative;
+    height: 4rem;
+    width: 100%;
+}
+
+.container .input-field textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-radius: .5rem;
+    padding: 1.1rem 2.8rem 1.1rem .9rem;
+    border: .06rem solid #fac031;
+    resize: none;
+}
+
+.container .input-field textarea:focus{
+    border-color: var(--red);
+}
+
+.container .input-field textarea:-webkit-scrollbar{
+   display: none; 
+}
+
+.container .input-field .note-icon{
+    position: absolute;
+    top: 50%;
+    right: .9rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 1.5rem;
+    color: var(--red);
+}
+
+.container .input-field textarea:focus ~ .note-icon{
+    color: rgb(255, 136, 0)
+}
+
+.container .todoLists{
+    max-height: 23.75rem;
+    overflow-y: auto;
+    padding-right: .6rem;
+}
+
+.container .todoLists .list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: #fac031;
+    padding: 1.25rem 0.9rem;
+    margin-top: .6rem;
+    border-radius: .5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .todoLists .list input{
+    height: 1rem;
+    min-width: 1rem;
+    accent-color: var(--red);
+    pointer-events: none; 
+}
+
+.container .todoLists .list .task{
+    margin: 0 1.8rem 0 .9rem;
+    word-break: break-all;
+}
+
+.container .todoLists .list input:checked ~ .task{
+    text-decoration: line-through;
+}
+
+.container .todoLists .list i{
+    position: absolute;
+    top: 50%;
+    right: .9rem;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+    color: var(--red);
+    padding: .3rem;
+    opacity: 0.6;
+    display: none;
+}
+
+.container .todoLists .list:hover i{
+    display: inline-flex;
+}
+
+.container .todoLists .list i:hover{
+    opacity: 1;
+}
+
+.container .pending-tasks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.container .pending-tasks span{
+    color: #fffacf;
+}
+
+.container .pending-tasks .clear-button{
+    padding: .3rem .75rem;
+    outline: none;
+    border: none;
+    background: var(--yellow);
+    color: orangered;
+    font-size: .8rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.container .pending-tasks .clear-button:hover{
+    background-color: #fac031;
+}

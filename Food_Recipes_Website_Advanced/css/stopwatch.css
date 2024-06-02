@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --black: #0000; 
+    --red:#C61938;
+    --ligtred: #da5454;
+    --orange:#ed7e3b;
+    --yellow:#fffacf;
+    --light-color:#fac031;
+    --box-shadow:.5rem 1.5rem rgba(158, 3, 3, 0.1);
+}
+
+
+*{
+    font-family: "Nunito", sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcdbbd;   /*DEGISEBILIR*/
+    background: linear-gradient(to right, #fff133, #ff9900);
+}
+
+.wrapper{   
+    user-select: none;
+}
+
+.wrapper .time{
+    height: 6.25rem;
+    background: #C61938;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3rem;
+    box-shadow: .6rem .6rem 1.25rem rgba(158, 3, 3, 0.1);
+    padding: 0 .6rem;
+}
+
+.wrapper .time span{
+    width: 6.25rem;
+    text-align: center;
+    font-size: 3.1rem;
+    font-weight: 500;
+    color: var(--yellow);
+}
+
+.wrapper .time span.colon{
+ width: .6rem;
+}
+
+.wrapper .time span.ms-colon,
+.wrapper .time span.millisecond{
+    color: var(--ligtred);
+}
+
+.wrapper .buttons{
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+.buttons button{
+    padding: .3rem 1rem;
+    outline: none;
+    border: none;
+    margin: 0 .3rem;
+    color: var(--ligtred);
+    background: #fffacf;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: .25rem;
+    cursor: pointer;
+    box-shadow: .6rem .6rem 1.25rem rgba(158, 3, 3, 0.1);
+}
+
+.buttons button.active,
+.buttons button.stopActive{
+    cursor: not-allowed;
+    opacity: 0.8;
+}

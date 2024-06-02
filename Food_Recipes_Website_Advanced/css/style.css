@@ -3,6 +3,7 @@
 :root{
     --black: #0000; 
     --red:#C61938;
+    --ligtred: #da5454;
     --orange:#ed7e3b;
     --yellow:#fffacf;
     --light-color:#fac031;
@@ -28,7 +29,8 @@ html{
 }
 
 body{
-    background: #fcdbbd;   /*DEGISEBILIR*/
+    background-color: #fcdbbd;   /*DEGISEBILIR*/
+    background: linear-gradient(to right, #fff133, #ff9900);
 }
 
 section{
@@ -217,7 +219,7 @@ header .icons #menu-bars{
 }
 
 .home .home-slider .slide .content p{
-    color: var(--light-color);
+    color: var(--ligtred);
     font-size: 2.2rem;
     padding: .5rem 0;
     line-height: 1.5;

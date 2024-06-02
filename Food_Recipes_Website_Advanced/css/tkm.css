@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --black: #0000; 
+    --red:#C61938;
+    --ligtred: #da5454;
+    --orange:#ed7e3b;
+    --orange2: #ff7f27;
+    --yellow:#fffacf;
+    --light-color:#fac031;
+    --box-shadow:0.5rem 1.5rem rgba(158, 3, 3, 0.1);
+}
+
+*{
+    font-family: "Nunito", sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fcdbbd;   /*DEGISEBILIR*/
+    background: linear-gradient(to right, #fff133, #ff9900);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    padding: 2rem 7rem;
+    border-radius: .8rem;
+    background: var(--yellow);
+    box-shadow: 0 5px 10px rgba(158, 3, 3, 0.1);
+}
+
+.result_images{
+    display: flex;
+    column-gap: 7rem;
+}
+
+.result_images img{
+    width: 6.25rem;
+}
+
+.user_result img{
+    transform: rotate(90deg);
+}
+
+.cpu_result img{
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+.result{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--orange2);
+    margin-top: 1.5rem;
+}
+
+.option_image img{
+    width: 3.1rem;
+}
+
+.option_images{
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+}
+
+
+.option_image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.option_image:hover{
+    opacity: 1;
+}
+
+.option_image.active{
+    opacity: 1;
+}
+
+.option_image img{
+    pointer-events: none; 
+}
+
+.option_image p{
+    color: var(--orange2);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    pointer-events: none;
+}
